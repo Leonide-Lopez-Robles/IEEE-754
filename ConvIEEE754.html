@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convertidor IEEE 754</title>
     <style>
-        .salida{
-            padding: 10px;
-            margin-top: 10px;
-        }
-
         input[type="button"], input[type="number"] {
             padding: 10px;
             margin-top: 10px;
@@ -33,14 +28,14 @@
             let input = document.getElementById('numb10').value;
 
             if (input === '') {
-                document.getElementById('resultado').innerText = "Por favor, ingresa un número válido.";
+                document.getElementById('resultado').innerText = "Por favor, ingresa un numero valido.";
                 return;
             }
 
             let numero = parseFloat(input);
 
             if (isNaN(numero)) {
-                document.getElementById('resultado').innerText = "El valor ingresado no es un número válido.";
+                document.getElementById('resultado').innerText = "El valor ingresado no es un numero valido.";
                 return;
             }
 
@@ -49,7 +44,7 @@
             let vistaFloat = new Float32Array(buffer);  // Vista para trabajar con el numero como float
             let vistaInt = new Uint32Array(buffer);     // Vista para ver los bits como entero de 32 bits
 
-            // Colocamos el número en la vista del float
+            // Colocamos el numero en la vista del float
             vistaFloat[0] = numero;
 
             // Obtenemos los bits del numero
